@@ -1,0 +1,14 @@
+.g_bg_primary {
+    background: #1A71B5;
+}
+
+.g_bg_primary3 {
+    background: #10578D;
+}
+.g_bg_light2 {
+    background: hsla(0, 0%, 98%, 0.795);
+}
+
+.g_text-primary {
+    color: #10578D;
+}
