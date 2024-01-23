@@ -116,6 +116,18 @@ integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObm
  </div>
 
  <!----Login form-->
+         <section
+          style="background: #e8f3f9; margin: auto; width: 80%;"
+          class="px-3 py-2 d-flex justify-content-between"
+        >
+          <h6 class="m-0 b_text-primary fw-bold b_cursor_pointer">
+            Login to OnlineSBI
+          </h6>
+          <h6 class="m-0 b_text-primary fw-bold b_cursor_pointer">
+            Welcome to Personal Internet Banking
+          </h6>
+        </section>
+
     <section class="g_login_form">
       <div class="row">
         <div class="col-12 col-lg-6 p-0">
@@ -132,6 +144,7 @@ integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObm
                     <div>
                       <label for="username" class="ps-2">Username*</label>
                       <input
+                      onfocus="usernameFun()"
                         type="text"
                         name="username"
                         id="username"
@@ -141,6 +154,7 @@ integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObm
                     <div class="mt-2">
                       <label for="password" class="ps-2">Password*</label>
                       <input
+                      onfocus="passwordFun()"
                         type="password"
                         name="password"
                         id="password"
@@ -148,13 +162,14 @@ integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObm
                       />
                     </div>
                     <div class="mt-2">
-                      <label for="image" class="ps-2"
+                      <label for="captcha" class="ps-2"
                         >Enter the text as shown in the image *</label
                       >
                       <input
+                      onfocus="captchaFun()"
                         type="text"
                         name="captcha"
-                        id="image"
+                        id="captcha"
                         class="d-block w-100 bg-light rounded-0 g_input"
                       />
                     </div>
@@ -186,8 +201,8 @@ integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObm
                       </div>
 
                       <div class="d-flex align-items-center">
-                        <div class="g_captcha_box">
-                          <img src="images/CaptchaImages.jpg" alt="" />
+                        <div  style="text-decoration: line-through;" id="g_captcha_box" class="g_captcha_box" >
+                          <!-- <img src="images/CaptchaImages.jpg" alt="" /> -->
                         </div>
                         <i
                           class="fa fa-refresh g_cursor_pointer"
@@ -226,7 +241,7 @@ integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObm
                       <div
                         class="g_keyborad_content text-center align-items-center d-flex justify-content-center gap-1"
                       >
-                        <input type="checkbox" id="checkbox" />
+                        <input type="checkbox" id="checkbox">
                         <label  for="checkbox" class="pt-1"
                           >Enable Virtual Keyboard</label
                         >
@@ -246,7 +261,7 @@ integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObm
                 <a
                   href=""
                   class="g_text_primary2 text-info fw-bold text-decoration-none"
-                  >More</a
+                  ><span style="text-decoration: uder;">More</span></a
                 >
               </p>
             </div>
@@ -282,6 +297,78 @@ integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObm
               </ul>
             </div>
           </div>  
+          <div class="p-1 d-none g_dynamic_keyboard" >
+            <h5 class="text-center">Online Virtual Keyboard</h5>
+            <div id="checkbox" class="g_keyborad_box " >
+              <div class="g_key">~</div>
+              <div class="g_key">!</div>
+              <div class="g_key">@</div>
+              <div class="g_key ">#</div>
+              <div class="g_key">$</div>
+              <div class="g_key">%</div>
+              <div class="g_key">^</div>
+              <div class="g_key">&</div>
+              <div class="g_key">*</div>
+              <div class="g_key">(</div>
+              <div class="g_key">)</div>
+              <div class="g_key">_</div>
+              <div class="g_key">+</div>
+              <div class="g_key">`</div>
+              <div class="g_key">8</div>
+              <div class="g_key">3</div>
+              <div class="g_key">4</div>
+              <div class="g_key">5</div>
+              <div class="g_key">6</div>
+              <div class="g_key">1</div>
+              <div class="g_key">0</div>
+              <div class="g_key">9</div>
+              <div class="g_key">2</div>
+              <div class="g_key">7</div>
+              <div class="g_key">-</div>
+              <div class="g_key">=</div>
+              <div class="g_key">q</div>
+              <div class="g_key">w</div>
+              <div class="g_key">t</div>
+              <div class="g_key">e</div>
+              <div class="g_key">r</div>
+              <div class="g_key">o</div>
+              <div class="g_key">i</div>
+              <div class="g_key">y</div>
+              <div class="g_key">u</div>
+              <div class="g_key">p</div>
+              <div class="g_key">{</div>
+              <div class="g_key">}</div>
+              <div class="g_key">|</div>
+              <div class="g_key">d</div>
+              <div class="g_key">a</div>
+              <div class="g_key">g</div>
+              <div class="g_key">f</div>
+              <div class="g_key">s</div>
+              <div class="g_key">i</div>
+              <div class="g_key">h</div>
+              <div class="g_key">j</div>
+              <div class="g_key">k</div>
+              <div class="g_key">[</div>
+              <div class="g_key">]</div>
+              <div class="g_key">\</div>
+              <div class="g_key">/</div>
+              <div class="g_key">c</div>
+              <div class="g_key">z</div>
+              <div class="g_key">v</div>
+              <div class="g_key">x</div>
+              <div class="g_key">n</div>
+              <div class="g_key">b</div>
+              <div class="g_key">m</div>
+              <div class="g_key"><</div>
+              <div class="g_key">></div>
+              <div class="g_key">;</div>
+              <div class="g_key">:</div>
+              <div class="g_key">'</div>
+              <div class="g_key">"</div>
+              <div class="g_key">Clear</div>
+            </div>
+          </div>
+
           
       </div>
     </div>
@@ -302,7 +389,7 @@ integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObm
           </p>
          </div>
         </div>
-        <div class="col-12 col-lg-4 ">
+        <div class="col-12 col-lg-4 mt-0  pt-3">
           <div class="g_bg_light2 p-3 g_tips_box">
             <div class="text-center fs-2 g_text-primary">
               <i class="fa fa-link" aria-hidden="true"></i>
@@ -380,12 +467,57 @@ integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObm
     ></script>
      <script>
 
-// const keyInput = document.querySelectorAll(".g_key");
-//       const formInput = document.querySelectorAll(".g_input");
+const keyInput = document.querySelectorAll(".g_key");
+      const formInput = document.querySelectorAll(".g_input");
 
-//       const checkbox = document.getElementById("checkbox");
-//       const imageBox = document.querySelector(".g_dynamic_image_content_box");
-//       const keyBox = document.querySelector(".g_dynamic_keyboard");
+      const checkbox = document.getElementById(" checkbox");
+      const imageBox = document.querySelector(".g_dynamic_image_content_box");
+      const keyBox = document.querySelector(".g_dynamic_keyboard");
+
+      let inputFocusName = null;
+      function usernameFun() {
+        inputFocusName = "username";
+      }
+
+      function passwordFun() {
+        inputFocusName = "password";
+      }
+
+      function captchaFun() {
+        inputFocusName = "captcha";
+      }
+      const captchaBox = document.getElementById("g_captcha_box");
+      const refreshCaptcha = document.getElementById("refreshCaptcha");
+      function captchaGen() {
+        let randomString = "0197441BA9A2125923D88F997400A9A6";
+        let result = "";
+
+        for (let i = 0; i < 5; i++) {
+          result += randomString.charAt(
+            Math.floor(Math.random() * randomString.length)
+          );
+        }
+
+        return result;
+      }
+
+      window.onload = function () {
+        captchaBox.innerText = captchaGen();
+      };
+      refreshCaptcha.addEventListener("click", function () {
+        captchaBox.innerText = captchaGen();
+      });
+
+      document.addEventListener("click", function (event) {
+        if (event.target.classList.contains("g_key")) {
+          const input = document.getElementById(inputFocusName);
+          if (event.target.innerText === "Clear") {
+            input.value = "";
+          } else {
+            input.value += event.target.innerText;
+          }
+        }
+      });
 
       checkbox.addEventListener("change", function (e) {
         const isVisiable = e.target.checked;
@@ -397,15 +529,6 @@ integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObm
           imageBox.classList.add("d-none");
         }
       });
-   
-document.getElementById("checkbox");
-var images=document.getElementsByTagName("img");
-for(var i=0;i<images.length;i++)
-{
-   images.remove();
-}
-   document.getElementById("keyboard_text").focus();
-
      </script>
 
 

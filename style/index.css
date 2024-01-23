@@ -64,16 +64,17 @@ header .g_bottom a:hover {
 }
 
 .g_captcha_box {
-    width: 120px;
+    padding-right: 50px;
+    width: 70px;
     height: 50px;
     padding: 10px;
 }
 
-.g_captcha_box img {
+/* .g_captcha_box img {
     width: 99%;
     height: 99%;
     object-fit: cover;
-}
+} */
 
 .g_form_links a {
     font-size: 12px;
@@ -231,4 +232,23 @@ header .g_bottom a:hover {
     background-color: rgba(105, 105, 105, 0.993);
 }
 
+/*dynamic keyboard */
+.g_dynamic_keyboard {
+    width: 98.5%;
+}
 
+.g_dynamic_keyboard .g_keyborad_box {
+    display: grid;
+    background: #F0F5F7;
+    border: 1px solid #377292;
+    grid-template-columns: repeat(13, 1fr);
+}
+.g_dynamic_keyboard .g_keyborad_box .g_key{
+    border-bottom: 1px solid #377292;
+    border-right: 1px solid #377292;
+    height: 40px;
+    line-height: 2;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+}
