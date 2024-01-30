@@ -510,13 +510,6 @@ integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObm
   });
 
   document.addEventListener("click", function (event) {
-    // console.log(event.target.classList)
-    // if (event.target.classList[1] === "b_key") {
-    //   console.log(event.target);
-    // }
-    // if (event.target.classList.value === "b_key") {
-    //   console.log(event.target);
-    // }
     if (event.target.classList.contains("g_key")) {
       const input = document.getElementById(inputFocusName);
       if (event.target.innerText === "Clear") {
