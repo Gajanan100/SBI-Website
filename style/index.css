@@ -48,12 +48,6 @@ header .g_bottom a:hover {
     color: black;
 }
 
-/*  Border Box */
-.g_login_form
-{
-        margin: auto;
-        width: 80%;       
-}
 .g_login_form input {
     outline: none;
     border: none;
@@ -70,12 +64,6 @@ header .g_bottom a:hover {
     padding: 10px;
 }
 
-/* .g_captcha_box img {
-    width: 99%;
-    height: 99%;
-    object-fit: cover;
-} */
-
 .g_form_links a {
     font-size: 12px;
     color: #10578D !important;
@@ -86,8 +74,15 @@ header .g_bottom a:hover {
 .g_form_links a:hover {
     text-decoration: underline;
 }
+
+.g_login_form .g_notice  a:hover
+{  
+    text-decoration-color: hsl(237, 47%, 32%);
+    text-decoration-line: underline;
+}
+
 .g_keyborad_content {
-    background: url("images/Virtual_Text_box.png");
+    /* background: url("images/Virtual_Text_box.png"); */
     padding: 10px 5px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -123,13 +118,6 @@ header .g_bottom a:hover {
 }
 
 
-/*SBI Tips */
-
-.g_tips_Sbi
-{
-    margin: auto;
-    width: 80%;
-}
 
 .g_tips_Sbi .g_tips_box {
     border: 1px solid rgba(0, 0, 0, 0.038);
@@ -175,7 +163,7 @@ header .g_bottom a:hover {
   }
 .g_fs_11
 {
-    font-size: 12px ;
+    font-size: 13px ;
 }
 
 /*Istruction*/
@@ -197,12 +185,6 @@ header .g_bottom a:hover {
 }
 
 /*---- footer-----*/
-.g_footer
-{
-   margin: auto;
-   width: 80%;
-   
-}
 .g_footer .g_img_footer
 {
     height: 40px;

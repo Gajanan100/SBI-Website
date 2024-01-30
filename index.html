@@ -113,23 +113,22 @@ integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObm
     </div>
 
   </header>
- </div>
-
- <!----Login form-->
-         <section
-          style="background: #e8f3f9; margin: auto; width: 80%;"
-          class="px-3 py-2 d-flex justify-content-between"
-        >
-          <h6 class="m-0 b_text-primary fw-bold b_cursor_pointer">
-            Login to OnlineSBI
-          </h6>
-          <h6 class="m-0 b_text-primary fw-bold b_cursor_pointer">
-            Welcome to Personal Internet Banking
-          </h6>
-        </section>
+  <main>
+    <section
+    style="background: #e8f3f9"
+    class="px-3 py-2 d-flex justify-content-between"
+  >
+    <h6 class="m-0 g_text-primary fw-bold g_cursor_pointer">
+      Login to OnlineSBI
+    </h6>
+    <h6 class="m-0 g_text-primary fw-bold g_cursor_pointer">
+      Welcome to Personal Internet Banking
+    </h6>
+  </section>
 
     <section class="g_login_form">
       <div class="row">
+                   <!--Left side dynamic form-->
         <div class="col-12 col-lg-6 p-0">
           <div class="p-4 pe-0">
             <span
@@ -144,7 +143,7 @@ integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObm
                     <div>
                       <label for="username" class="ps-2">Username*</label>
                       <input
-                      onfocus="usernameFun()"
+                        onfocus="usernameFun()"
                         type="text"
                         name="username"
                         id="username"
@@ -154,7 +153,7 @@ integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObm
                     <div class="mt-2">
                       <label for="password" class="ps-2">Password*</label>
                       <input
-                      onfocus="passwordFun()"
+                        onfocus="passwordFun()"
                         type="password"
                         name="password"
                         id="password"
@@ -166,7 +165,7 @@ integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObm
                         >Enter the text as shown in the image *</label
                       >
                       <input
-                      onfocus="captchaFun()"
+                        onfocus="captchaFun()"
                         type="text"
                         name="captcha"
                         id="captcha"
@@ -201,10 +200,11 @@ integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObm
                       </div>
 
                       <div class="d-flex align-items-center">
-                        <div  style="text-decoration: line-through;" id="g_captcha_box" class="g_captcha_box" >
-                          <!-- <img src="images/CaptchaImages.jpg" alt="" /> -->
+                        <div style="text-decoration: line-through;" id="g_captcha_box" class="g_captcha_box">
+                          <!-- <img src="./img/simpleCaptchaServ.png" alt="" /> -->
                         </div>
                         <i
+                          id="refreshCaptcha"
                           class="fa fa-refresh g_cursor_pointer"
                           aria-hidden="true"
                         ></i>
@@ -241,8 +241,8 @@ integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObm
                       <div
                         class="g_keyborad_content text-center align-items-center d-flex justify-content-center gap-1"
                       >
-                        <input type="checkbox" id="checkbox">
-                        <label  for="checkbox" class="pt-1"
+                        <input type="checkbox" id="checkbox" />
+                        <label for="checkbox" class="pt-1"
                           >Enable Virtual Keyboard</label
                         >
                       </div>
@@ -252,24 +252,24 @@ integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObm
               </div>
             </form>
             <div
-              style="width: 110%; font-size: 11px; background: hwb(187 89% 5%)"
-              class="ms-auto p-2 b_notice"
+              style="width: 107%; font-size: 11px; background: #f2f6f7"
+              class="ms-auto p-2 g_notice"
             >
               <p class="m-0">
                 For better security use the Online Virtual Keyboard to
                 login.
                 <a
                   href=""
-                  class="g_text_primary2 text-info fw-bold text-decoration-none"
-                  ><span style="text-decoration:underline;">More</span></a
+                  class="g_text_primary2 fw-bold text-decoration-none"
+                  >More...</a
                 >
               </p>
             </div>
           </div>
         </div>
-        <!--right side dynamic keyboard and image-->
+        <!--right side  image box-->
         <div class="col-12 col-lg-6 p-0">
-          <!--image and content-->
+          <!--image and dynamic box -->
           <div class="g_dynamic_image_content_box">
             <div class="g_top_img">
               <img src="images/RightSideImg.png" alt="" />
@@ -296,14 +296,15 @@ integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObm
                 </li>
               </ul>
             </div>
-          </div>  
-          <div class="p-1 d-none g_dynamic_keyboard" >
+          </div>
+          <!--dynamic keyboard-->
+          <div class="p-1 d-none g_dynamic_keyboard">
             <h5 class="text-center">Online Virtual Keyboard</h5>
-            <div id="checkbox" class="g_keyborad_box " >
+            <div class="g_keyborad_box">
               <div class="g_key">~</div>
               <div class="g_key">!</div>
               <div class="g_key">@</div>
-              <div class="g_key ">#</div>
+              <div class="g_key">#</div>
               <div class="g_key">$</div>
               <div class="g_key">%</div>
               <div class="g_key">^</div>
@@ -368,12 +369,10 @@ integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObm
               <div class="g_key">Clear</div>
             </div>
           </div>
-
-          
+        </div>
       </div>
-    </div>
     </section>
-    <!---  Tips section Sbi-->
+<!---  Tips section Sbi-->
     <section class="g_tips_Sbi px-4 g_fs_11">
       <div class="row">
         <div class="col-12 col col-lg-4 ">
@@ -432,106 +431,113 @@ integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObm
         </div>
       </div>
     </section>
-    <!----Intruction -->
-    <section class="g_intruction">
-          <div>
-             <ul>
-              <li>
-                Mandatory fields are marked with an asterisk (*)
-              </li>
-              <li>
-                Do not provide your username and password anywhere other than in this page
-              </li>
-              <li>
-                Your username and password are highly confidential. Never part with them.SBI will never ask for this information.
-              </li>
-             </ul>
-          </div>
+    <!---notices bottom-->
+    <section style="background: #e2ecf0" class="b_notice_bottom p-2 mt-4">
+      <ul class="b_fs_11 mb-0">
+        <li>Mandatory fields are marked with an asterisk (*)</li>
+        <li>
+          Do not provide your username and password anywhere other than in
+          this page
+        </li>
+        <li>
+          Your username and password are highly confidential. Never part
+          with them.SBI will never ask for this information.
+        </li>
+      </ul>
     </section>
-    <section class="g_footer">
-      <div class="g_img_footer">
-          <img src="images/SignImg.jpg" alt="" />
-
-      </div>
-      <div class="g_footer_bottom ">
-        <div class="d-flex justify-content-between">
-          <div> © State Bank of India (APM Id: Serv_Tran_552)</div>
-          <div>Site best viewed at 1024 x 768 resolution in Microsoft Edge 79 +, Mozilla 96 +, Google Chrome 97 +</div>
+    <footer>
+      <!--verify sign-->
+      <section class="g_footer">
+        <div class="g_img_footer">
+            <img src="images/SignImg.jpg" alt="" />
+  
         </div>
-      </div>
-    </section>
-           <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous"
-    ></script>
-     <script>
+        <div class="g_footer_bottom ">
+          <div class="d-flex justify-content-between">
+            <div> © State Bank of India (APM Id: Serv_Tran_552)</div>
+            <div>Site best viewed at 1024 x 768 resolution in Microsoft Edge 79 +, Mozilla 96 +, Google Chrome 97 +</div>
+          </div>
+        </div>
+      </section>
+      </footer>
+  </main>
+</div>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+  crossorigin="anonymous"
+></script>
+<script>
+  const keyInput = document.querySelectorAll(".g_key");
+  const formInput = document.querySelectorAll(".g_input");
 
-const keyInput = document.querySelectorAll(".g_key");
-      const formInput = document.querySelectorAll(".g_input");
+  const checkbox = document.getElementById("checkbox");
+  const imageBox = document.querySelector(".g_dynamic_image_content_box");
+  const keyBox = document.querySelector(".g_dynamic_keyboard");
 
-      const checkbox = document.getElementById(" checkbox");
-      const imageBox = document.querySelector(".g_dynamic_image_content_box");
-      const keyBox = document.querySelector(".g_dynamic_keyboard");
+  let inputFocusName = null;
+  function usernameFun() {
+    inputFocusName = "username";
+  }
 
-      let inputFocusName = null;
-      function usernameFun() {
-        inputFocusName = "username";
+  function passwordFun() {
+    inputFocusName = "password";
+  }
+
+  function captchaFun() {
+    inputFocusName = "captcha";
+  }
+  const captchaBox = document.getElementById("g_captcha_box");
+  const refreshCaptcha = document.getElementById("refreshCaptcha");
+  function captchaGen() {
+    let randomString = "0197441BA9A2125923D88F997400A9A6";
+    let result = "";
+
+    for (let i = 0; i < 5; i++) {
+      result += randomString.charAt(
+        Math.floor(Math.random() * randomString.length)
+      );
+    }
+
+    return result;
+  }
+
+  window.onload = function () {
+    captchaBox.innerText = captchaGen();
+  };
+  refreshCaptcha.addEventListener("click", function () {
+    captchaBox.innerText = captchaGen();
+  });
+
+  document.addEventListener("click", function (event) {
+    // console.log(event.target.classList)
+    // if (event.target.classList[1] === "b_key") {
+    //   console.log(event.target);
+    // }
+    // if (event.target.classList.value === "b_key") {
+    //   console.log(event.target);
+    // }
+    if (event.target.classList.contains("g_key")) {
+      const input = document.getElementById(inputFocusName);
+      if (event.target.innerText === "Clear") {
+        input.value = "";
+      } else {
+        input.value += event.target.innerText;
       }
+    }
+  });
 
-      function passwordFun() {
-        inputFocusName = "password";
-      }
+  checkbox.addEventListener("change", function (e) {
+    const isVisiable = e.target.checked;
+    if (!isVisiable) {
+      imageBox.classList.remove("d-none");
+      keyBox.classList.add("d-none");
+    } else {
+      keyBox.classList.remove("d-none");
+      imageBox.classList.add("d-none");
+    }
+  });
+</script>
 
-      function captchaFun() {
-        inputFocusName = "captcha";
-      }
-      const captchaBox = document.getElementById("g_captcha_box");
-      const refreshCaptcha = document.getElementById("refreshCaptcha");
-      function captchaGen() {
-        let randomString = "0197441BA9A2125923D88F997400A9A6";
-        let result = "";
-
-        for (let i = 0; i < 5; i++) {
-          result += randomString.charAt(
-            Math.floor(Math.random() * randomString.length)
-          );
-        }
-
-        return result;
-      }
-
-      window.onload = function () {
-        captchaBox.innerText = captchaGen();
-      };
-      refreshCaptcha.addEventListener("click", function () {
-        captchaBox.innerText = captchaGen();
-      });
-
-      document.addEventListener("click", function (event) {
-        if (event.target.classList.contains("g_key")) {
-          const input = document.getElementById(inputFocusName);
-          if (event.target.innerText === "Clear") {
-            input.value = "";
-          } else {
-            input.value += event.target.innerText;
-          }
-        }
-      });
-
-      checkbox.addEventListener("change", function (e) {
-        const isVisiable = e.target.checked;
-        if (!isVisiable) {
-          imageBox.classList.remove("d-none");
-          keyBox.classList.add("d-none");
-        } else {
-          keyBox.classList.remove("d-none");
-          imageBox.classList.add("d-none");
-        }
-      });
-     </script>
-
-
-  </div>
 </body>
 </html>
